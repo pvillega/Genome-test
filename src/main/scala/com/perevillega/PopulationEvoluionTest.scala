@@ -14,10 +14,11 @@ object PopulationEvoluionTest extends App {
 
   val initialPopSize = 100
   val maxPop = 1000
-  val iterations = 2000
+  val iterations = 200
 
-  // With initial 100, max 1000 and 20 cycles we maximise population and get quite a random lot
-  // With initial 100, max 1000 and 2000 cycles we maximise population and get very diverse pop
+  // Given all parents reproduce we maximise population quickly
+  // With initial 100, max 1000, and 20 cycles -> pop with extreme low average: A 0.283/40  D -0.829/40  S 47.241/180
+  // With initial 100, max 1000, and 2000 cycles -> pop with very low averages: A -2.867/40  D 3.889/40  S 54.875/180
   timeRun {
     // Note that every member of the pack reproduces in this algorithm. We may want to limit this :)
     println(s"Cull random population")
@@ -29,6 +30,5 @@ object PopulationEvoluionTest extends App {
     println("Average creature")
     println(s"A ${avgAtt/endPop.size.toDouble}/40  D ${avgDef/endPop.size.toDouble}/40  S ${avgSpeed/endPop.size.toDouble}/180")
   }
-
 
 }
