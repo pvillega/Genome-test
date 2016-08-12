@@ -3,8 +3,9 @@ lazy val genome = project
   .enablePlugins(AutomateHeaderPlugin, GitVersioning)
 
 libraryDependencies ++= Vector(
+  Library.cats,
   Library.scalaTest % "test"
 )
 
-initialCommands := """|import default.genome._
+initialCommands := """|import com.perevillega._
                       |""".stripMargin

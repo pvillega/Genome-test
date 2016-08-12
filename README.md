@@ -1,6 +1,9 @@
-# genome #
+# Genome #
 
-Welcome to genome!
+Welcome to Genome! This is a silly experiment to test how randomness and a fitness function would affect a group of individuals,
+putting pressure on their Genome to evolve towards a certain goal.
+
+It's a crude, simplistic approach, just for fun.
 
 ## Contribution policy ##
 
